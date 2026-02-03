@@ -7,7 +7,8 @@
           label="Метки (через ;)"
           :rules="[rules.maxLength(50, 'Максимальная длина 50 символов')]"
           clearable
-          @update:model-value="(val: string) => localUser.marks = val.trim()"
+          @click:clear="localUser.marks = ''"
+          @update:model-value="(val: string) => localUser.marks = val?.trim()"
           @blur="handleSave"
         />
       </v-col>
@@ -28,7 +29,8 @@
           :rules="[rules.required('Поле логин обязательно'), rules.maxLength(100, 'Максимальная длина 100 символов')]"
           label="Логин"
           clearable
-          @update:model-value="(val: string) => localUser.login = val.trim()"
+          @click:clear="localUser.login = ''"
+          @update:model-value="(val: string) => localUser.login = val?.trim()"
           @blur="handleSave"
         />
       </v-col>
@@ -38,7 +40,8 @@
           :model-value="localUser.password"
           :rules="[rules.required('Поле пароль обязательно'), rules.maxLength(100, 'Максимальная длина 100 символов')]"
           clearable
-          @update:model-value="(val: string) => localUser.password = val.trim()"
+          @click:clear="localUser.password = ''"
+          @update:model-value="(val: string) => localUser.password = val?.trim()"
           @blur="handleSave"
         />
       </v-col>
