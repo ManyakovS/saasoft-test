@@ -11,6 +11,11 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    PasswordInput: typeof import('./src/components/PasswordInput.vue')['default']
+    Tip: typeof import('./src/components/Tip.vue')['default']
+    UsersForm: typeof import('./src/components/UsersForm.vue')['default']
+    UsersTable: typeof import('./src/components/UsersTable.vue')['default']
+    UsersTableHeader: typeof import('./src/components/UsersTableHeader.vue')['default']
+    UsersTableRow: typeof import('./src/components/UsersTableRow.vue')['default']
   }
 }
